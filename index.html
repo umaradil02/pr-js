@@ -8,11 +8,71 @@
         body{
             margin: 0;
             background-color: aqua;
+            overflow: hidden;
+
         }
+        .container{
+            width: 300px;
+            margin: 50px auto;
+            background-color: black;
+            padding: 10px;
+             border-radius: 10px;
+             border: 2px solid cornsilk;
+        }
+        #display{
+            width: calc(100% - 10px);
+            padding: 5px;
+            height: 50px;
+            font-size: 1rem;
+            font-weight: 800;
+            color: black;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .number{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+        #btn{
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.2rem;
+        }
+        #btn:hover{
+            background-color: cadetblue;
+            color: black;
+        }
+       
+
     </style>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
+    <div class="container">
+        <input  type="text" id="display" readonly>
+        <div class="number">
+        <input type="button" value="9"  id="btn" class="number">
+        <input type="button" value="8"  id="btn" class="number">
+        <input type="button" value="7"  id="btn" class="number">
+        <input type="button" value="+"  id="btn" class="oprator">
+        <input type="button" value="6"  id="btn" class="number">
+        <input type="button" value="5"  id="btn" class="number">
+        <input type="button" value="4"  id="btn" class="number">
+        <input type="button" value="*"  id="btn" class="oprator">
+        <input type="button" value="3"  id="btn" class="number">
+        <input type="button" value="2"  id="btn" class="number">
+        <input type="button" value="1"  id="btn" class="number">
+        <input type="button" value="/"  id="btn" class="oprator">
+        <input type="button" value="0"  id="btn" class="number">
+        <input type="button" value="-"  id="btn" class="oprator">
+        <input type="button" value="="  id="btn" class=" id="plus">
+        <input type="button" value="c"  id="btn" class=" id="clear">
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
